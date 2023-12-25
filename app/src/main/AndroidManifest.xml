@@ -41,6 +41,9 @@
         <activity
             android:name=".MainActivityMyAlarm">
         </activity>
+        <activity
+            android:name=".Maps">
+        </activity>
     </application>
 
 </manifest>

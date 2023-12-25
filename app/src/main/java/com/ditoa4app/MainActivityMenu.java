@@ -1,4 +1,5 @@
 package com.ditoa4app;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -32,13 +33,13 @@ public class MainActivityMenu extends AppCompatActivity {
             }
         });
 
-        tombolDua = findViewById(R.id.cdMenu3);
+        tombolDua = findViewById(R.id.cdMenu2);
         tombolDua.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Ketika tombolDua ditekan, lakukan aksi yang diinginkan
                 // Misalnya, pindah ke aktivitas lain atau jalankan fungsi khusus
-                Intent intent = new Intent(MainActivityMenu.this, MainActivityCount.class);
+                Intent intent = new Intent(MainActivityMenu.this, MainActivityScrollIceCold.class);
                 startActivity(intent);
             }
         });
@@ -49,7 +50,7 @@ public class MainActivityMenu extends AppCompatActivity {
             public void onClick(View v) {
                 // Ketika tombolDua ditekan, lakukan aksi yang diinginkan
                 // Misalnya, pindah ke aktivitas lain atau jalankan fungsi khusus
-                Intent intent = new Intent(MainActivityMenu.this, MainActivityCount.class);
+                Intent intent = new Intent(MainActivityMenu.this, MainActivityOne.class);
                 startActivity(intent);
             }
         });
@@ -58,7 +59,9 @@ public class MainActivityMenu extends AppCompatActivity {
         tombolEmpat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivityMenu.this, MainActivityOne.class);
+                // Ketika tombolDua ditekan, lakukan aksi yang diinginkan
+                // Misalnya, pindah ke aktivitas lain atau jalankan fungsi khusus
+                Intent intent = new Intent(MainActivityMenu.this,  MainActivityCount.class);
                 startActivity(intent);
             }
         });
@@ -67,6 +70,8 @@ public class MainActivityMenu extends AppCompatActivity {
         tombolLima.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Ketika tombolDua ditekan, lakukan aksi yang diinginkan
+                // Misalnya, pindah ke aktivitas lain atau jalankan fungsi khusus
                 Intent intent = new Intent(MainActivityMenu.this, MainActivityMyAlarm.class);
                 startActivity(intent);
             }
@@ -76,9 +81,11 @@ public class MainActivityMenu extends AppCompatActivity {
         tombolEnam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivityMenu.this, MainActivityScrollIceCold.class);
+
+                Intent intent = new Intent(MainActivityMenu.this, Maps.class);
                 startActivity(intent);
             }
+
         });
     }
 }
