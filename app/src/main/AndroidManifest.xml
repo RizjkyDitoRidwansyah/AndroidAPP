@@ -4,46 +4,50 @@
 
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:icon="@drawable/icon"
+        android:label="RIDIT Apps"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DitoA4App"
         tools:targetApi="31">
 
-        <activity android:name=".MainActivityMenu"
+        <activity android:name=".Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".MainActivity">
-        </activity>
-        <activity
-            android:name=".MainActivityCount">
-        </activity>
-        <activity
-            android:name=".MainActivityScrollIceCold">
-        </activity>
-        <activity
-            android:name=".MainActivityOne">
-        </activity>
-        <activity
-            android:name=".MainActivitySecond">
-        </activity>
-        <activity
-            android:name=".MainActivityMyAlarm">
-        </activity>
-        <activity
-            android:name=".Maps">
-        </activity>
-    </application>
 
+        </activity>
+        <activity android:name=".Menu"></activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivityCount"></activity>
+        <activity android:name=".MainActivityScrollIceCold"></activity>
+        <activity android:name=".pesan.MainActivityOne"></activity>
+        <activity android:name=".pesan.MainActivitySecond"></activity>
+        <activity android:name=".alarm.ActivityAlarm"></activity>
+
+
+        <activity android:name=".fragment.ViewPagerActivity"></activity>
+        <activity android:name=".fragment.sinopsis.SinopsisAction1"></activity>
+        <activity android:name=".fragment.sinopsis.SinopsisThriller1"></activity>
+        <activity android:name=".fragment.sinopsis.SinopsisThriller2"></activity>
+        <activity android:name=".fragment.sinopsis.SinopsisAction2"></activity>
+        <activity android:name=".fragment.sinopsis.SinopsisRomance1"></activity>
+        <activity android:name=".fragment.sinopsis.SinopsisRomance2"></activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+
+    </application>
 </manifest>

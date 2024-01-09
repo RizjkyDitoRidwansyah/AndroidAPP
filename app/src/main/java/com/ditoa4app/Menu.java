@@ -2,12 +2,17 @@ package com.ditoa4app;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-public class MainActivityMenu extends AppCompatActivity {
+import com.ditoa4app.alarm.ActivityAlarm;
+import com.ditoa4app.fragment.ViewPagerActivity;
+import com.ditoa4app.pesan.MainActivityOne;
+
+public class Menu extends AppCompatActivity {
 
     CardView tombolSatu;
     CardView tombolDua;
@@ -15,6 +20,8 @@ public class MainActivityMenu extends AppCompatActivity {
     CardView tombolEmpat;
     CardView tombolLima;
     CardView tombolEnam;
+    CardView tombolTujuh;
+    CardView tombolDelapan;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -27,8 +34,7 @@ public class MainActivityMenu extends AppCompatActivity {
         tombolSatu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Ketika tombolSatu ditekan, pindah ke HelloActivity
-                Intent intent = new Intent(MainActivityMenu.this, MainActivity.class);
+                Intent intent = new Intent( Menu.this, MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -37,9 +43,7 @@ public class MainActivityMenu extends AppCompatActivity {
         tombolDua.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Ketika tombolDua ditekan, lakukan aksi yang diinginkan
-                // Misalnya, pindah ke aktivitas lain atau jalankan fungsi khusus
-                Intent intent = new Intent(MainActivityMenu.this, MainActivityScrollIceCold.class);
+                Intent intent = new Intent( Menu.this, MainActivityCount.class);
                 startActivity(intent);
             }
         });
@@ -48,9 +52,7 @@ public class MainActivityMenu extends AppCompatActivity {
         tombolTiga.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Ketika tombolDua ditekan, lakukan aksi yang diinginkan
-                // Misalnya, pindah ke aktivitas lain atau jalankan fungsi khusus
-                Intent intent = new Intent(MainActivityMenu.this, MainActivityOne.class);
+                Intent intent = new Intent( Menu.this, MainActivityScrollIceCold.class);
                 startActivity(intent);
             }
         });
@@ -59,9 +61,7 @@ public class MainActivityMenu extends AppCompatActivity {
         tombolEmpat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Ketika tombolDua ditekan, lakukan aksi yang diinginkan
-                // Misalnya, pindah ke aktivitas lain atau jalankan fungsi khusus
-                Intent intent = new Intent(MainActivityMenu.this,  MainActivityCount.class);
+                Intent intent = new Intent( Menu.this,  ActivityAlarm.class);
                 startActivity(intent);
             }
         });
@@ -70,9 +70,7 @@ public class MainActivityMenu extends AppCompatActivity {
         tombolLima.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Ketika tombolDua ditekan, lakukan aksi yang diinginkan
-                // Misalnya, pindah ke aktivitas lain atau jalankan fungsi khusus
-                Intent intent = new Intent(MainActivityMenu.this, MainActivityMyAlarm.class);
+                Intent intent = new Intent( Menu.this, MainActivityCount.class);
                 startActivity(intent);
             }
         });
@@ -81,11 +79,33 @@ public class MainActivityMenu extends AppCompatActivity {
         tombolEnam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Intent intent = new Intent(MainActivityMenu.this, Maps.class);
+                Intent intent = new Intent( Menu.this, MainActivityOne.class);
                 startActivity(intent);
             }
+        });
 
+        tombolTujuh = findViewById(R.id.cdMenu7);
+        tombolTujuh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW);
+                mapIntent.setPackage("com.google.android.apps.maps");
+
+                if (mapIntent.resolveActivity(getPackageManager()) != null) {
+                    Uri gmmIntentUri = Uri.parse( "geo:0,0?q=" + Uri.encode( "Universitas Pelita Bangsa" ) );
+                    mapIntent.setData( gmmIntentUri );
+                    startActivity( mapIntent );
+                }
+            }
+        });
+
+        tombolDelapan = findViewById(R.id.cdMenu8);
+        tombolDelapan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( Menu.this, ViewPagerActivity.class);
+                startActivity(intent);
+            }
         });
     }
 }

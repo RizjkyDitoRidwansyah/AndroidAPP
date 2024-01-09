@@ -1,4 +1,4 @@
-package com.ditoa4app;
+package com.ditoa4app.alarm;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,9 +11,11 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
+import com.ditoa4app.R;
+
 import java.util.Calendar;
 
-public class MainActivityMyAlarm extends AppCompatActivity {
+public class ActivityAlarm extends AppCompatActivity {
 
     TimePicker alarmTimePicker;
     PendingIntent pendingIntent;
@@ -22,7 +24,7 @@ public class MainActivityMyAlarm extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_myalarm);
+        setContentView( R.layout.activity_myalarm);
         alarmTimePicker = (TimePicker) findViewById(R.id.timePicker);
         alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
     }
@@ -31,7 +33,7 @@ public class MainActivityMyAlarm extends AppCompatActivity {
     public void OnToggleClicked(View view) {
         long time;
         if (((ToggleButton) view).isChecked()) {
-            Toast.makeText(MainActivityMyAlarm.this, "ALARM ON", Toast.LENGTH_SHORT).show();
+            Toast.makeText( ActivityAlarm.this, "ALARM ON", Toast.LENGTH_SHORT).show();
             Calendar calendar = Calendar.getInstance();
 
             // calendar is called to get current time in hour and minute
@@ -40,7 +42,7 @@ public class MainActivityMyAlarm extends AppCompatActivity {
 
             // using intent i have class AlarmReceiver class which inherits
             // BroadcastReceiver
-            Intent intent = new Intent(this, MyBroadcastReceiver.class);
+            Intent intent = new Intent(this, AlarmReceiver.class);
 
             // we call broadcast using pendingIntent
             pendingIntent = PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_IMMUTABLE);
@@ -59,7 +61,7 @@ public class MainActivityMyAlarm extends AppCompatActivity {
             // alarmManager.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + (time * 1000), pendingIntent);
         } else {
             alarmManager.cancel(pendingIntent);
-            Toast.makeText(MainActivityMyAlarm.this, "ALARM OFF", Toast.LENGTH_SHORT).show();
+            Toast.makeText( ActivityAlarm.this, "ALARM OFF", Toast.LENGTH_SHORT).show();
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.ditoa4app;
+package com.ditoa4app.pesan;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.ditoa4app.R;
 
 public class MainActivityOne extends AppCompatActivity {
     private static final String LOG_TAG = MainActivityOne.class.getSimpleName();
@@ -23,7 +25,7 @@ public class MainActivityOne extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_one);
+        setContentView( R.layout.activity_one);
 
         mMessageEditText = findViewById(R.id.editText_main);
         mReplyHeadTextView = findViewById(R.id.text_header_reply);

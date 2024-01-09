@@ -1,4 +1,4 @@
-package com.ditoa4app;
+package com.ditoa4app.alarm;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 
-public class MyBroadcastReceiver extends BroadcastReceiver {
+public class AlarmReceiver extends BroadcastReceiver {
     @RequiresApi(api = Build.VERSION_CODES.Q)
     @Override
     // implement onReceive() method
