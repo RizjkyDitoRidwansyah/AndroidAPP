@@ -283,7 +283,7 @@ new Handler().postDelayed(new Runnable() {
 
 ###  Vidio hasil semua program :
 
-https://github.com/RizjkyDitoRidwansyah/AndroidAPP/blob/main/Gambar/RIDIT%20APP.mp4
+[<img src="https://github.com/RizjkyDitoRidwansyah/AndroidAPP/blob/main/Gambar/RIDIT%20APP.mp4">}
 
 
 -------------------------------
