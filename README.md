@@ -282,8 +282,8 @@ new Handler().postDelayed(new Runnable() {
 - Dengan pengaturan ini, aktivitas ini secara efektif menampilkan sinopsis film dalam format video melalui `WebView`, memberikan pengguna pengalaman visual yang langsung terintegrasi ke dalam aplikasi.
 
 ###  Vidio hasil semua program :
-[<img src="https://github.com/RizjkyDitoRidwansyah/AndroidAPP/blob/main/Gambar/RIDIT%20APP.mp4">}
 
+https://github.com/RizjkyDitoRidwansyah/AndroidAPP/assets/116090827/cbba3ea4-acc0-4589-82d5-a8429f345f9b
 
 -------------------------------
 # TERIMA KASIH
