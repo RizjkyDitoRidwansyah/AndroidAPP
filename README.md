@@ -25,9 +25,6 @@ Activity pertama yang dibuat adalah teks greeting, contoh Hello!
         app:layout_constraintTop_toTopOf="parent" />
 ```
 
-###  Capture hasil:
-![image](https://github.com/RafiMlnf/Andro/assets/115614668/9e90bc8a-5ce5-40fa-9e53-72e086468a71)
-
 
 ## 2. Toast
 
@@ -51,7 +48,6 @@ makeText(): Metode statis dari kelas Toast untuk membuat instans Toast baru.
 
 Jadi Toast itu tujuannya uuntuk menampilkan pesan singkat kepada pengguna (sesuai dengan nilai yang didefinisikan dalam R.string.toast_message) melalui elemen UI, seperti tombol, yang terhubung dengan metode showToast.
 
-### Capture hasil:
 
 ## 3. Scrolling (Ice Cold)
 Menampilkan teks berita yang dapat di scroll. Menggunakan metode `scrollview` yang didalamnya diisi dengan `textview` berita.
@@ -63,7 +59,6 @@ Menampilkan teks berita yang dapat di scroll. Menggunakan metode `scrollview` ya
        <TextView ... />
 </ScrollView>
 ```
-###  Capture hasil:
 
 
 ## 4. Fibonacci
@@ -173,7 +168,6 @@ Handle Result:
 
 Kode ini menciptakan pengalaman pengguna di mana pengguna dapat memasukkan pesan di `MainActivityOne`, mengirimkannya ke `MainActivitySecond` melalui tombol, dan menampilkan balasan di `MainActivityOne` setelah aktivitas kedua selesai.
 
-###  Capture hasil:
 
 ## 6. Menu
 Menu ini adalah bagian dari sebuah aplikasi Android yang mengimplementasikan aktivitas menu dengan menggunakan CardView untuk setiap opsi menu. Kita dapat memilih aplikasi-aplikasi yang kita buat, dengan menggunakan metode intent. Berikut adalah penjelasannya:
@@ -190,7 +184,6 @@ Pengaturan Tombol:
 - Setiap tombol (tombolSatu hingga tombolDelapan) memiliki `OnClickListener` yang memulai aktivitas tertentu ketika tombol tersebut diklik. Aktivitas yang dimulai bervariasi dari `MainActivity` hingga `ViewPagerActivity`, dan bahkan membuka aplikasi Google Maps untuk menavigasi ke "Universitas Pelita Bangsa" pada tombol tujuh.
 Kode ini memberikan pengguna akses ke berbagai fitur dan aktivitas dalam aplikasi melalui menu dengan menggunakan CardView sebagai elemen UI yang responsif terhadap sentuhan.
 
-###  Capture hasil:
 
 ## 7. Maps
 - Mensetting depedensi maps pada `build.gradle`.
@@ -208,7 +201,6 @@ Lalu mengarahkan kita ke target lokasi yang telah di setting.
                     Uri gmmIntentUri = Uri.parse( "geo:0,0?q=" + Uri.encode( "Universitas Pelita Bangsa" ) );
 ```
 
-###  Capture hasil:
 
 ## 8. Splash
 Implementasi dari sebuah Splash Screen pada aplikasi, berguna sebagai intro aplikasi. Berikut adalah deskripsi singkat bagian-vbagian kode:  
@@ -237,7 +229,6 @@ new Handler().postDelayed(new Runnable() {
 }, SPLASH_DELAY);
 ```
 
-###  Capture hasil:
 
 ## 9. Fragment
 - ViewPagerAdapter
@@ -266,7 +257,6 @@ new Handler().postDelayed(new Runnable() {
 }
 ```
 
-###  Capture hasil:
 
 ## 10. Sinopsis dan Trailer
 
@@ -291,7 +281,9 @@ new Handler().postDelayed(new Runnable() {
 
 - Dengan pengaturan ini, aktivitas ini secara efektif menampilkan sinopsis film dalam format video melalui `WebView`, memberikan pengguna pengalaman visual yang langsung terintegrasi ke dalam aplikasi.
 
-###  Capture hasil:
+###  Vidio hasil semua program :
+![image]
+
 
 -------------------------------
 # TERIMA KASIH
