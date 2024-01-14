@@ -140,7 +140,6 @@ Metode ini menawarkan fungsionalitas perubahan warna yang sesuai dengan setiap p
 - Jika currentFib adalah bilangan genap, maka warna yang dikembalikan adalah warna hitam; jika ganjil, warna yang dikembalikan adalah warna putih.
 - Warna didapatkan menggunakan ContextCompat.getColor() dengan referensi warna dari resource (R.color).
 
-###  Capture hasil:
 
 ## 5. Pesan
 Kode ini adalah bagian dari sebuah aplikasi Android yang terdiri dari dua aktivitas (MainActivityOne dan MainActivitySecond) dan digunakan untuk berinteraksi antaraktivitas. Berikut adalah penjelasan singkatnya:
